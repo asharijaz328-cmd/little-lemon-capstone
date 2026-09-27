@@ -1,0 +1,77 @@
+.booking-form {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.booking-form h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 2rem;
+  color: #495E57;
+  margin-bottom: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #333333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Karla', sans-serif;
+  transition: border-color 0.2s;
+  outline: none;
+  background-color: #FAFAFA;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #495E57;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(73, 94, 87, 0.15);
+}
+
+.error-msg {
+  color: #d32f2f;
+  font-size: 0.82rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #F4CE14;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s, transform 0.15s;
+  font-family: 'Karla', sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: #e0ba00;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
