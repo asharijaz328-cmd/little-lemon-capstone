@@ -1,0 +1,83 @@
+.ll-navbar {
+  background: #ffffff;
+  border-bottom: 2px solid #e8e8e8;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+
+.ll-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ll-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.ll-nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.ll-nav-links li a {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: 'Karla', sans-serif;
+  outline: none;
+}
+
+.ll-nav-links li a:hover,
+.ll-nav-links li a.nav-active {
+  color: #495E57;
+}
+
+.ll-nav-links li a:focus {
+  outline: none;
+}
+
+.ll-nav-links li a:focus-visible {
+  outline: 2px dashed #495E57;
+  outline-offset: 3px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #333333;
+  font-family: 'Karla', sans-serif;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.nav-btn:hover {
+  color: #495E57;
+}
+
+@media (max-width: 768px) {
+  .ll-nav-links {
+    display: none;
+  }
+}
