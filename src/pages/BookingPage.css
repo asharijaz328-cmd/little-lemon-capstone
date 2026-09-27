@@ -1,0 +1,30 @@
+.booking-page {
+  min-height: 80vh;
+}
+
+.booking-hero {
+  background: #495E57;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.booking-hero h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 3rem;
+  color: #F4CE14;
+  margin-bottom: 10px;
+}
+
+.booking-hero p {
+  font-size: 1rem;
+  color: #edefee;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-section {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
