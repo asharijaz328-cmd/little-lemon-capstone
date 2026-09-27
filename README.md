@@ -1,76 +1,49 @@
-# Little Lemon – Table Booking App
+# Little Lemon Restaurant - Capstone Project
 
-A React web application for Little Lemon restaurant that lets customers reserve tables online. This is the final capstone project for the Meta Front-End Developer Certificate.
+This is my final project for the Meta Front-End Developer Professional Certificate. It is a responsive React web app for Little Lemon where customers can browse our menu, learn about the restaurant and reserve a table online.
 
-## Features
+## What is inside
 
-- Browse the restaurant homepage with specials, testimonials, and about sections
-- Reserve a table using the interactive booking form
-- Dynamic time slot availability based on selected date
-- Form validation with helpful error messages
-- Fully accessible (ARIA labels, semantic HTML)
-- Responsive design for desktop and mobile
+- **Home Page**: Hero banner with booking button, weekly specials with food cards, customer testimonials and our story in the about section
+- **Booking Flow**: Table reservation form at `/booking` with live date picker and dynamically loaded time slots
+- **Form Validation**: Client-side checks for name, email format, valid date and party size (1 to 10 guests)
+- **Confirmation Screen**: Friendly success screen shown at `/confirmed` after submitting
+- **Accessibility**: Semantic HTML5 elements (`nav`, `main`, `section`, `article`, `footer`), descriptive labels tied to every input and `role="alert"` for errors
+- **Automated Tests**: 8 unit tests written with React Testing Library and Jest covering validation, form rendering and reducer updates
 
-## Tech Stack
+## Tech used
 
-- React 18 with React Router v6
-- `useReducer` for managing available time slots
-- Custom form validation
-- CSS Modules (plain CSS per component)
-- Jest + React Testing Library for unit tests
+- React 18
+- React Router v6
+- CSS modules with responsive flexbox and grid layouts
+- Jest and React Testing Library
 
-## Getting Started
+## How to run it locally
 
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm
-
-### Setup
+First install the packages:
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Start dev server on port 9000
+Then start the local development server:
+
+```bash
 npm start
 ```
 
-Then open [http://localhost:9000](http://localhost:9000) in your browser.
+The app will be running at [http://localhost:9000](http://localhost:9000).
 
-### Running Tests
+## Running the tests
+
+To execute the unit test suite:
 
 ```bash
 npm test
 ```
 
-## Project Structure
+All 8 tests should pass without warnings.
 
-```
-src/
-├── components/
-│   ├── Navbar.js / Navbar.css
-│   ├── Hero.js / Hero.css
-│   ├── Specials.js / Specials.css
-│   ├── Testimonials.js / Testimonials.css
-│   ├── About.js / About.css
-│   ├── BookingForm.js / BookingForm.css
-│   └── Footer.js / Footer.css
-├── pages/
-│   ├── HomePage.js
-│   ├── BookingPage.js / BookingPage.css
-│   └── ConfirmedBooking.js / ConfirmedBooking.css
-├── __tests__/
-│   └── BookingForm.test.js
-├── api.js (fetchAPI + submitAPI)
-└── App.js
-```
+## State Management
 
-## API Functions
-
-- `fetchAPI(date)` — returns an array of available time strings for a given date
-- `submitAPI(formData)` — submits booking data and returns `true` on success
-
-## Accessibility
-
-All interactive elements have appropriate ARIA labels, form inputs are associated with their labels via `htmlFor`, and error messages use `role="alert"`.
+The available booking times are handled using React's `useReducer` hook inside `BookingPage.js`. When a user picks a different date, `updateTimes` calls the `fetchAPI` function with that date and refreshes the dropdown list with open slots. Submitting sends the form values through `submitAPI` and redirects to the confirmation page.
